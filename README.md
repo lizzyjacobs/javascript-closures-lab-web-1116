@@ -8,25 +8,47 @@ JavaScript Closures Lab
 3. Use a closure to define a partially applied function
 
 ## Introduction
+Now that we've talked about what closures are and how we can leverage them to write better code, it's time to put that knowledge
+to the test! As a quick reminder, a closure is basically a function that has inner functions. These inner functions still
+have access to the variables in the closure's scope (i.e. parameters as well as regular variables) after the closure
+itself has been executed. We can use closures to emulate having 'private' variables and methods, as well as use them to
+make creating certain functions quicker and more dynamic.
 
-- Include a brief review of the previous lesson (https://github.com/learn-co-curriculum/javascript-closures)
-- Be sure to spend some time talking about partially applied functions
-- These things can be hard/weird to test — we're sort of violating a lot of testing principles by testing implementation instead of behavior, which can go against an experienced programmer's intuition
-- It might be worth setting up contrived examples for the first few practice problems
-  - A simple curried example:
+## Three point turn
+![Austin Powers car](https://media.giphy.com/media/y6Sl42U3xEFkk/giphy.gif)
 
-  ```javascript
-  function adder(x) {
-    return function(y) {
-      return x + y
-    }
-  }
+Sometimes, in applications, we need to count things. Austin Powers isn't a great driver — see above for the damning
+evidence. Luckily, his poor driving skills give us ample opportunity to stretch our coding muscles. Let's create a
+closure that we can use to keep track of how many times he's bumped into the wall.
 
-  var add5 = adder(5)
-  add5(4) // 9
-  ```
+* Create a function, `bumpCounter()`, that has a variable called `counter`. This variable should *not* be accessible
+outside of the function!
+* The `bumpCounter()` function has two inner functions: `addBump()` and `getBumps()`. These two functions need to be returned,
+as they will be used to increase the counter, and get the counter value.
+* The `addBump()` function should increase the counter by 1.
+* The `getBumps()` function should return the current count.
 
-- Remember to push `master` and `solution` branches separately
+
+## Blood in the water
+![Sharks with frickin' laser beams](https://media.giphy.com/media/EW4ObFkJPMJQA/giphy.gif)
+
+Dr. Evil has a penchant for murderous animals. As if sharks weren't deadly enough, now he wants to attach **laser beams**
+to their heads! Being his ever faithful servant, let's use a closure to create animals to which we can attach various
+deadly devices.
+
+* Create a function, `createAnimal()`, that takes has one parameter, `animalType`.
+* Create an inner function in this `createAnimal()` function that also has one parameter, `deadlyDevice`. This function
+then returns an object that forms our diabolical creation. This object has two properties, `animalType` and `deadlyDevice`
+that are the given arguments to both functions.
+* An example of the output: `{ animalType: 'Monkey', deadlyDevice: 'Lightsaber' }`
+* Create a shark creator function by calling `createAnimal()` with the `'Shark'` string. This should be assigned to a
+variable called `sharkCreator`.
+* Add a variable called `sharkWithFrickinLaserbeam` that is a combination of a `'Shark'` and `'Laserbeam'`.
+* Add a variable called `sharkWithFrickinCannon` that is a combination of a `'Shark'` and `'Cannons'`.
+
+Thanks to our ingenious engineering, we can create an infinite amount of sharks, with various deadly contraptions
+attached. Because we're using a closure that we partially apply, we can also do this for other animal species. Dr. Evil
+will surely be pleased!
 
 ## Resources
 
