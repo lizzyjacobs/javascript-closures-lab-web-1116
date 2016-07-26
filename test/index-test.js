@@ -1,15 +1,4 @@
-const expect = require('expect');
-
-const fs = require('fs');
-const jsdom = require('mocha-jsdom');
-const path = require('path');
-
-
-describe('Closures', () => {
-  jsdom({
-    src: fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
-  });
-  
+describe('closures', function() {
   describe('Three point turn', function () {
     it('should have a `bumpCounter()` function', () => {
       expect(bumpCounter).toBeA('function');
@@ -65,4 +54,4 @@ describe('Closures', () => {
       expect(sharkWithFrickinCannon.deadlyDevice).toEqual('Cannon');
     });
   });
-});
+})
