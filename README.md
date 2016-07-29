@@ -36,7 +36,7 @@ Dr. Evil has a penchant for murderous animals. As if sharks weren't deadly enoug
 to their heads! Being his ever faithful servant, let's use a closure to create animals to which we can attach various
 deadly devices.
 
-* Create a function, `createAnimal()`, that takes has one parameter, `animalType`.
+* Create a function, `createAnimal()`, that takes one parameter, `animalType`.
 * Create an inner function in this `createAnimal()` function that also has one parameter, `deadlyDevice`. This function
 then returns an object that forms our diabolical creation. This object has two properties, `animalType` and `deadlyDevice`
 that are the given arguments to both functions.
@@ -53,3 +53,5 @@ will surely be pleased!
 ## Resources
 
 - [Curried JavaScript functions](http://javascript.crockford.com/www_svendtofte_com/code/curried_javascript/)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-closures-lab'>Closures Lab</a> on Learn.co and start learning to code for free.</p>
