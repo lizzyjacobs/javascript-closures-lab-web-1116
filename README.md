@@ -3,8 +3,8 @@ JavaScript Closures Lab
 
 ## Objectives
 
-1. Practice using closures in an application setting
-2. Practice returning functions that close over "private" variables
+1. Use closures in an application setting
+2. Return functions that close over "private" variables
 3. Use a closure to define a partially applied function
 
 ## Introduction
@@ -44,7 +44,7 @@ that are the given arguments to both functions.
 * Create a shark creator function by calling `createAnimal()` with the `'Shark'` string. This should be assigned to a
 variable called `sharkCreator`.
 * Add a variable called `sharkWithFrickinLaserbeam` that is a combination of a `'Shark'` and `'Laserbeam'`.
-* Add a variable called `sharkWithFrickinCannon` that is a combination of a `'Shark'` and `'Cannons'`.
+* Add a variable called `sharkWithFrickinCannon` that is a combination of a `'Shark'` and `'Cannon'`.
 
 Thanks to our ingenious engineering, we can create an infinite amount of sharks, with various deadly contraptions
 attached. Because we're using a closure that we partially apply, we can also do this for other animal species. Dr. Evil
